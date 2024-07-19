@@ -10,8 +10,8 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<BlogPostList />} />
-          <Route path="/post/:id" element={<BlogPostDetails />} />
+          <Route path="/Blog-Post" element={<BlogPostList />} />
+          <Route path="/Blog-Post/post/:id" element={<BlogPostDetails />} />
         </Routes>
       </div>
     </Router>

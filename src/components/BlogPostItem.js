@@ -14,7 +14,7 @@ const BlogPostItem = ({ post }) => {
       <div className="card-body">
         <h5 className="card-title">{post.title}</h5>
         <p className="card-text description">{post.description}</p>
-        <Link to={`/post/${encodeUrl(post.url)}`} className="btn btn-primary">
+        <Link to={`/Blog-Post/post/${encodeUrl(post.url)}`} className="btn btn-primary">
           Read More
         </Link>
       </div>
