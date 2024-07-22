@@ -9,7 +9,13 @@ const BlogPostList = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const result = await axios.get(`https://newsapi.org/v2/everything?q=technology&apiKey=a089d8a237f641cf81e63e77e3097b3e&page=${page}`);
+        const result = await axios.get(`https://newsapi.org/v2/everything`, {
+          params: {
+            q: 'technology',
+            apiKey: 'a089d8a237f641cf81e63e77e3097b3e',
+            page: page
+          }
+        });
         setPosts(result.data.articles.filter(post => post.urlToImage));
       } catch (error) {
         console.error('Error fetching data:', error);
